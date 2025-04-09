@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3ef32bc5ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id ="header">
+    <div class="container">
+        <nav>
+            <img src="kppp.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>
+                Front-End Developer
+            </p>
+            <h1> Hi, I'm <span>KHUSHI KP </span> <br>From Karnataka</h1>
+        </div>
+    </div>
+   </div> 
+   <!-------------about------------>
+   <div id="about">
+    <div class="container">
+    <div class="row">
+    <div class="about-col-1">
+    <img src="person.png">
+   </div>
+
+   <div class="about-col-2">
+  <h1 class="sub-title">About Me</h1>
+  <p>
+    I’m an Information Science Engineering student and a 
+    Front-End Developer focused on building responsive, user-friendly, 
+    and visually appealing web experiences. Using HTML, CSS, and JavaScript, 
+    I create clean, functional, and efficient designs. I enjoy solving 
+    challenges, refining my skills, and staying updated with
+     the latest web technologies to deliver impactful solutions.
+  </p>
+  <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
+    <p class="tab-links"  onclick="opentab('education',event)">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id = "skills">
+        <ul>
+            <li><span>Front-End Developer</span><br> A Front-End Developer creates the visual and interactive parts of a website or app.</li>
+            <li><span>C,Java,Python </span><br>General-purpose programming.</li>
+            <li><span> Problem-Solving & Critical Thinking</span><br> Essential for coding challenges.</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>2022-2026</span><br>B.E from Bangalore Institue Of Technology</li>
+            <li><span>2020-2022</span><br>PUC from Vidhyanidhi Independent PU Collge</li>
+        </ul>
+    
+</div>
+</div> 
+</div> 
+</div>
+</div>
+<!------Services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-chart-simple"></i>
+                <h2>Chat-MLX</h2>
+                <p>
+                    A machine learning application that processes WhatsApp
+                    chat logs to extract insights like sentiment, activity patterns, 
+                    and most active participants. It visualizes data using graphs and 
+                    word clouds for easy interpretation.
+                </p>
+                <a href="http://github.com/KHUSHI-KP/Chat-MLX">Click Here</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-clock"></i>
+                <h2>TimeZen</h2>
+                <p>
+                    TimeZen is a modern and interactive web app that shows
+                     the current time, date, and live weather.
+                    It includes theme and sound toggle buttons, greeting 
+                    messages, and motivational quotes that refresh every minute.
+                </p>
+                <a href="https://github.com/KHUSHI-KP/TimeZen">Click Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------Contact---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                
+                <h1 class="sub-title">Contact Me</h1><br>
+                <p><i class="fa-regular fa-share-from-square"></i> khushikp0211@gmail.com</p><br>
+                <p><i class="fa-solid fa-square-phone"></i> 8746068692</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/khushi-k-p-ab8507319/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/KHUSHI-KP"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/__khushikp__/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+               <a href="Sample.pdf" download class="btn btn2">DOWNLOAD RESUME </a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+    <p>Copyright © KP</p>
+</div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+    
+    
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenue=document.getElementById("sidemenu");
+    function openmenu(){
+sidemenue.style.right="0";
+    }
+    function closemenu(){
+        sidemenue.style.right="-200px";
+            }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwK9z0B73KJxukRNxstmBbk1cEXaOjL9lw4AXpeBVOxI8RDn1brD6fEvq9MvhIvjqKswQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent Succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
